@@ -6,7 +6,7 @@
 	<meta charset="utf-8" />
 </head>
 <body>
-    <p style="width:700px">
+    <div style="width:700px">
     <srong><h1>Davit Hunanyan</h1></srong>
     <hr></hr>
     <section>
@@ -19,7 +19,7 @@
         
     </section>
     <hr />
-    <h2>Contact with me</h2>
+    <center><i><strong><h4>Contact with me</h4></strong></i></center>
     <form action="" method="post">
             
                 
@@ -31,9 +31,12 @@
         <label for="mail">E-mail:</label>
         <input type="email" id="mail" name="user_email" />
     </p>
+        <p>
+            <label for="name">Phone:</label>
+            <input type="text" id="name" name="user_phone" />
+        </p>
     <p>
-        <label for="msg">Message:</label>
-        <textarea id="msg" name="user_message"></textarea>
+        <textarea id="msg" name="user_message" cols="23" rows="10" placeholder="Message..."></textarea>
     </p>
         <label for="Lenguge">Lenguge:</label>
           <select name="Lenguge" id="Lenguge">
@@ -44,9 +47,9 @@
             <option value="Ruby">Ruby</option>
         </select>
         <p >
-            <button type="submit" style="background-color:green">Send </button>
+            <button type="submit" style="background-color:green">Send your message >>> </button>
         
-            <button type="reset" style="background-color:blue">Reset </button>
+            <button type="reset" style="background-color:red">Cancel </button>
         
         </p>
 </form>
