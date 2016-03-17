@@ -2,11 +2,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>--CV--</title>
 	<meta charset="utf-8" />
      <style>
         .main{
             width:700px;
+            margin:auto;
+        }
+
+        #name{
+            text-align:center;
+            font-family:Verdana;
+            font-size:20px;
+            padding:10px 0px 10px 0px;
         }
         
         .center{
@@ -20,37 +28,40 @@
             height:170px;
         }
         
-        .left{
+        .form_input_right{
             float:left;
         }
         
         .form_style{
 
-            height:250px;
+            height:200px;
         }
-        
-        .text_area{
 
-          margin-left:340px;
-          margin-top:30px
+        textarea{
+            border:solid 2px black;
+            border-top-right-radius:20px;
+            border-bottom-left-radius:20px;
+            background-color:e;
+            color:black;
+        }
+        .text_area{
+            font-family:Arial;
+            margin-left:340px;
+            margin-top:30px
         }
         
         .button{
             
-            margin-top:80px;
+            margin-top:30px;
             margin-left:450px;
         }
-        
-        #msg{
-            background-color:aquamarine;
-            color:black;
-
-        }
+       
         
         .input_style{
             background-color:#ededed;
             height:20px;
             width:250px;
+            
         }
        
          .send_btn_style{
@@ -85,7 +96,7 @@
              font-family:Arial;
          }
          
-         .prorg_leng_name{
+         .progr_leng_name{
              display:block;
              margin:40px 0px 0px 40px;
          }
@@ -99,7 +110,7 @@
 </head>
 <body>
      <div class="main">
-          <srong><h1>Davit Hunanyan</h1></srong>
+          <span id="name"><h1>Davit Hunanyan</h1></span>
              <hr></hr>
           <section class="section_style">
              <div class="center"><i>Personal details</i></div>
@@ -115,7 +126,7 @@
            <div class="center"><i>Contact with me</i></div>
          <form action="" method="post" class="form_style">
 
-             <div class="left">
+             <div class="form_input_right">
                  <p>
                      <label for="name">Name:</label>
                      <input class="input_style" type="text" id="name" name="user_name" />
@@ -136,12 +147,12 @@
                      <option value="C#" selected>C#</option>
                      <option value="JavaScript">JavaScript</option>
                      <option value="Java">Java</option>
-                     <option value="Ruby">Ruby</option>
+                     
                  </select>
                  <p>
              </div>
          <div class="text_area">
-                 <textarea id="msg" name="user_message" cols="45" rows="10" placeholder="Message..."></textarea>
+                 <textarea id="msg" name="user_message" cols="45" rows="10" placeholder="Write your message..."></textarea>
          </div>
 
              <div class="button">
@@ -186,7 +197,7 @@
 
         <div class="center"><i>Professional skills</i></div>
 
-        <span class="prorg_leng_name">HTML5, CSS3,CSS, JavaScript, jQuery ,C++</span>
+        <span class="progr_leng_name">HTML5, CSS3,CSS, JavaScript, jQuery ,C++</span>
     </section>
     <hr />
     <section class="section_style">
