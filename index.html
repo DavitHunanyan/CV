@@ -8,42 +8,93 @@
         .main{
             width:700px;
         }
+        
         .center{
          margin-left:300px;
          font-family:Arial;
          font-size:16px;
         }
+        
         .section_style{
             padding:10px 5px 10px 5px;
             height:170px;
         }
+        
         .left{
             float:left;
         }
+        
         .form_style{
 
             height:250px;
         }
+        
         .text_area{
 
           margin-left:340px;
           margin-top:30px
         }
+        
         .button{
             
             margin-top:80px;
             margin-left:450px;
         }
+        
         #msg{
             background-color:aquamarine;
             color:black;
 
         }
+        
         .input_style{
             background-color:#ededed;
             height:20px;
             width:250px;
         }
+       
+         .send_btn_style{
+            background-color:lawngreen;
+            border:solid 2px green;
+            border-radius:20px;
+        }
+        
+         .send_btn_style:hover{
+            background-color:green;
+            border:solid 4px green;
+            color:white;
+        }
+        
+         .cancel_btn_style{
+            background-color:red;
+            border:solid 2px black;
+            border-radius:20px;
+            color:white;
+        }
+         
+         .cancel_btn_style:hover {
+             background-color: red;
+             border: solid 6px red;
+             border-radius: 15px;
+             color: white;
+         }
+         
+         .table_style{
+             width:700px;
+             margin:40px 0px 0px 40px;
+             font-family:Arial;
+         }
+         
+         .prorg_leng_name{
+             display:block;
+             margin:40px 0px 0px 40px;
+         }
+         
+         .education{
+             display:block;
+             margin:40px 0px 0px 30px;
+             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+         }
     </style>
 </head>
 <body>
@@ -94,9 +145,9 @@
          </div>
 
              <div class="button">
-                 <button type="submit" style="background-color:green">Send your message >>> </button>
+                 <button class="send_btn_style" type="submit" >Send your message >>> </button>
 
-                 <button type="reset" style="background-color:red">Cancel </button>
+                 <button  class="cancel_btn_style"type="reset" >Cancel </button>
              </div>
 
              </p>
@@ -106,11 +157,14 @@
     <section class="section_style">
         <div class="center"><i>Education</i></div>
 
-        <p>2010-2016                      Yerevan State University faculty of  Informatics and Applied Mathematics</p>
+        <span class="education">
 
-        <p> 2015 (September -November)    Microsoft Innovation Center Armenia</p>
+            <p>2010-2016  Yerevan State University faculty of  Informatics and Applied Mathematics</p>
 
-        <p>2000-2010           №1 School	</p>
+            <p> 2015 (September -November) Microsoft Innovation Center Armenia</p>
+
+            <p>2000-2010  №1 School</p>
+        </span>
 
 
     </section>
@@ -132,15 +186,15 @@
 
         <div class="center"><i>Professional skills</i></div>
 
-        <p>HTML5, CSS3,CSS, JavaScript, jQuery ,C++</p>
+        <span class="prorg_leng_name">HTML5, CSS3,CSS, JavaScript, jQuery ,C++</span>
     </section>
     <hr />
     <section class="section_style">
         <div class="center"><i>Personal skills</i></div>
-        <table style="width:100%">
+        <table class="table_style">
             <tr>
                 <td>Adaptable</td>
-                <td>Reliable	</td>
+                <td>Reliable</td>
                 <td>Creative</td>
             </tr>
             <tr>
