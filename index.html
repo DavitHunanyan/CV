@@ -4,87 +4,139 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 	<meta charset="utf-8" />
+     <style>
+        .main{
+            width:700px;
+        }
+        .center{
+         margin-left:300px;
+         font-family:Arial;
+         font-size:16px;
+        }
+        .section_style{
+            padding:10px 5px 10px 5px;
+            height:170px;
+        }
+        .left{
+            float:left;
+        }
+        .form_style{
+
+            height:250px;
+        }
+        .text_area{
+
+          margin-left:340px;
+          margin-top:30px
+        }
+        .button{
+            
+            margin-top:80px;
+            margin-left:450px;
+        }
+        #msg{
+            background-color:aquamarine;
+            color:black;
+
+        }
+        .input_style{
+            background-color:#ededed;
+            height:20px;
+            width:250px;
+        }
+    </style>
 </head>
 <body>
-    <div style="width:700px">
-    <srong><h1>Davit Hunanyan</h1></srong>
-    <hr></hr>
-    <section>
-<center><h4><i>Personal details</i></h4></center>
-        <p>Contact information:</p>
-        <p>Address:Yerevan,Armenia</p>
-        <p>Tell 077-78-77-78</p>
-        <p>Gmail: 07DAV@gmail.com</p>
-        <p><a href="https:/LinkedIn:/www.linkedin.com/in/davit-hunanyan-014496103?trk=hp-identity-name">Linkedln</a></p>
+     <div class="main">
+          <srong><h1>Davit Hunanyan</h1></srong>
+             <hr></hr>
+          <section class="section_style">
+             <div class="center"><i>Personal details</i></div>
+              
+              <p>Address:Yerevan,Armenia</p>
+              <p><a href="tel:077-78-77-78">Tell:077-78-77-78</a></p>
+              <p>Gmail: 07DAV@gmail.com</p>
+              <p><a href="https:/LinkedIn:/www.linkedin.com/in/davit-hunanyan-014496103?trk=hp-identity-name">Linkedln</a></p>
         
-    </section>
+           </section>
     <hr />
-    <center><i><strong><h4>Contact with me</h4></strong></i></center>
-    <form action="" method="post">
-            
-                
-    <p>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name" />
-    </p>
-    <p>
-        <label for="mail">E-mail:</label>
-        <input type="email" id="mail" name="user_email" />
-    </p>
-        <p>
-            <label for="name">Phone:</label>
-            <input type="text" id="name" name="user_phone" />
-        </p>
-    <p>
-        <textarea id="msg" name="user_message" cols="23" rows="10" placeholder="Message..."></textarea>
-    </p>
-        <label for="Lenguge">Lenguge:</label>
-          <select name="Lenguge" id="Lenguge">
-            <option value="C++">C++</option>
-            <option value="C#" selected>C#</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="Java">Java</option>
-            <option value="Ruby">Ruby</option>
-        </select>
-        <p >
-            <button type="submit" style="background-color:green">Send your message >>> </button>
-        
-            <button type="reset" style="background-color:red">Cancel </button>
-        
-        </p>
-</form>
+    
+           <div class="center"><i>Contact with me</i></div>
+         <form action="" method="post" class="form_style">
+
+             <div class="left">
+                 <p>
+                     <label for="name">Name:</label>
+                     <input class="input_style" type="text" id="name" name="user_name" />
+                 </p>
+                 <p>
+                     <label for="mail">Gmail:</label>
+                     <input class="input_style" type="email" id="mail" name="user_email" />
+                 </p>
+                 <p>
+                     <label for="name">Phone:</label>
+                     <input class="input_style" type="text" id="name" name="user_phone" />
+                 </p>
+                 <p>
+                 </p>
+                 <label for="Lenguge">Lenguge:</label>
+                 <select class="input_style" name="Lenguge" id="Lenguge">
+                     <option value="C++">C++</option>
+                     <option value="C#" selected>C#</option>
+                     <option value="JavaScript">JavaScript</option>
+                     <option value="Java">Java</option>
+                     <option value="Ruby">Ruby</option>
+                 </select>
+                 <p>
+             </div>
+         <div class="text_area">
+                 <textarea id="msg" name="user_message" cols="45" rows="10" placeholder="Message..."></textarea>
+         </div>
+
+             <div class="button">
+                 <button type="submit" style="background-color:green">Send your message >>> </button>
+
+                 <button type="reset" style="background-color:red">Cancel </button>
+             </div>
+
+             </p>
+         </form>
      
     <hr />
-    <section>
-        <h4><center><i>Education</i></center></h4>
+    <section class="section_style">
+        <div class="center"><i>Education</i></div>
 
         <p>2010-2016                      Yerevan State University faculty of  Informatics and Applied Mathematics</p>
 
-       <p> 2015 (September -November)    Microsoft Innovation Center Armenia</p>
+        <p> 2015 (September -November)    Microsoft Innovation Center Armenia</p>
 
         <p>2000-2010           №1 School	</p>
 
 
     </section>
     <hr />
-    <section>
-       <center> <h4><i>Languages</i></h4></center>
-       <p> Armenian  		(native)</p>
-       <p> Russian		(fluent)</p>
-       <p> English		(normal)</p>
+    <section class="section_style">
+        <div class="center"><i>Languages</i></div>
+        <ul>
+            <li> Armenian  		(native)</li>
+            <li> Russian		(fluent)</li>
+            <li> English		(normal)</li>
+        
+         </ul>
+       
 
     </section>
     <hr />
 
-    <section>
+    <section class="section_style">
 
-        <center><i><srong><h4>Professional skills</h4></srong></i></center>
+        <div class="center"><i>Professional skills</i></div>
 
         <p>HTML5, CSS3,CSS, JavaScript, jQuery ,C++</p>
     </section>
     <hr />
-    <section>
-        <center> <h4><i>Personal skills</i></h4></center>
+    <section class="section_style">
+        <div class="center"><i>Personal skills</i></div>
         <table style="width:100%">
             <tr>
                 <td>Adaptable</td>
