@@ -2,17 +2,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>--CV--</title>
+    <title>Cv by Davit Hunanyan </title>
 	<meta charset="utf-8" />
      <style>
         .main{
             width:700px;
             margin:auto;
+            
         }
 
-        #name{
+        #CvName{
             text-align:center;
-            font-family:Verdana;
+            font-family:'Segoe UI Historic';
             font-size:20px;
             padding:10px 0px 10px 0px;
         }
@@ -52,7 +53,7 @@
         
         .button{
             
-            margin-top:30px;
+            margin-top:10px;
             margin-left:450px;
         }
        
@@ -61,6 +62,7 @@
             background-color:#ededed;
             height:20px;
             width:250px;
+            padding:2px 0px 2px 2px;
             
         }
        
@@ -95,6 +97,10 @@
              margin:40px 0px 0px 40px;
              font-family:Arial;
          }
+
+         .pers_detal{
+             margin:30px 0px 0px 30px;
+         }
          
          .progr_leng_name{
              display:block;
@@ -106,67 +112,61 @@
              margin:40px 0px 0px 30px;
              font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
          }
+         .back{
+             font-size:30px;
+             height:35px;
+             width:110px;
+             
+             
+             
+             margin-left:290px;
+            
+         }
+
     </style>
 </head>
 <body>
      <div class="main">
-          <span id="name"><h1>Davit Hunanyan</h1></span>
-             <hr></hr>
-          <section class="section_style">
-             <div class="center"><i>Personal details</i></div>
-              
-              <p>Address:Yerevan,Armenia</p>
-              <p><a href="tel:077-78-77-78">Tell:077-78-77-78</a></p>
-              <p>Gmail: 07DAV@gmail.com</p>
-              <p><a href="https:/LinkedIn:/www.linkedin.com/in/davit-hunanyan-014496103?trk=hp-identity-name">Linkedln</a></p>
-        
-           </section>
-    <hr />
-    
-           <div class="center"><i>Contact with me</i></div>
-         <form action="" method="post" class="form_style">
-
-             <div class="form_input_right">
-                 <p>
-                     <label for="name">Name:</label>
-                     <input class="input_style" type="text" id="name" name="user_name" />
-                 </p>
-                 <p>
-                     <label for="mail">Gmail:</label>
-                     <input class="input_style" type="email" id="mail" name="user_email" />
-                 </p>
-                 <p>
-                     <label for="name">Phone:</label>
-                     <input class="input_style" type="text" id="name" name="user_phone" />
-                 </p>
-                 <p>
-                 </p>
-                 <label for="Lenguge">Lenguge:</label>
-                 <select class="input_style" name="Lenguge" id="Lenguge">
-                     <option value="C++">C++</option>
-                     <option value="C#" selected>C#</option>
-                     <option value="JavaScript">JavaScript</option>
-                     <option value="Java">Java</option>
+          <span id="CvName"><h1>Davit Hunanyan</h1></span>
+             <hr />
+         <section class="section_style">
+             <nav >
+                  	<div class="center">&darr;&darr;&darr;&darr;&darr;</div>
+                     	<ul>
                      
-                 </select>
-                 <p>
-             </div>
-         <div class="text_area">
-                 <textarea id="msg" name="user_message" cols="45" rows="10" placeholder="Write your message..."></textarea>
-         </div>
+                     <li><a href="#Personal details">Personal details</a></li>
+                     
+                     <li><a href="#Education">Education</a></li>
+                 
+                     <li><a href="#Languages">Languages</a></li>
 
-             <div class="button">
-                 <button class="send_btn_style" type="submit" >Send your message >>> </button>
+                     <li><a href="#Professional skills">Professional skills</a></li>
 
-                 <button  class="cancel_btn_style"type="reset" >Cancel </button>
-             </div>
+                     <li> <a href="#Personal skills">Personal skills</a></li>
+                     
+                     <li><a href="#Contact with me">Contact with me</a></li>
 
-             </p>
-         </form>
+                 </ul>
+                 
+             </nav>
+
+
+         </section>
+         <hr />
+          <section class="section_style">
+             <div class="center" id="Personal details"><i>Personal details</i></div>
+              <div class="pers_detal">
+                <p>Address:Yerevan,Armenia</p>
+                <p><a href="tel:077-78-77-78">Tell:077-78-77-78</a></p>
+                <p>Gmail: Dav@gmail.com</p>
+                <p><a href="https:/LinkedIn:/www.linkedin.com/in/davit-hunanyan-014496103?trk=hp-identity-name">Linkedln</a></p>
+            </div>
+           </section>
+   
      
     <hr />
     <section class="section_style">
-        <div class="center"><i>Education</i></div>
+        <div class="center" id="Education"><i>Education</i></div>
 
         <span class="education">
 
@@ -181,7 +181,7 @@
     </section>
     <hr />
     <section class="section_style">
-        <div class="center"><i>Languages</i></div>
+        <div class="center" id="Languages"><i>Languages</i></div>
         <ul>
             <li> Armenian  		(native)</li>
             <li> Russian		(fluent)</li>
@@ -195,13 +195,13 @@
 
     <section class="section_style">
 
-        <div class="center"><i>Professional skills</i></div>
+        <div class="center" id="Professional skills"><i>Professional skills</i></div>
 
         <span class="progr_leng_name">HTML5, CSS3,CSS, JavaScript, jQuery ,C++</span>
     </section>
     <hr />
     <section class="section_style">
-        <div class="center"><i>Personal skills</i></div>
+        <div class="center" id="Personal skills"><i>Personal skills</i></div>
         <table class="table_style">
             <tr>
                 <td>Adaptable</td>
@@ -222,5 +222,50 @@
 
 
     </section>
+
+         <hr />
+
+         <div class="center" id="Contact with me"><i>Contact with me</i></div>
+         <form action="" method="post" class="form_style">
+
+             <div class="form_input_right">
+                 <p>
+                     <label for="name">Name:</label>
+                     <input class="input_style" type="text" id="name" name="user_name" />
+                 </p>
+                 <p>
+                     <label for="mail">Gmail:</label>
+                     <input class="input_style" type="email" id="mail" name="user_email" />
+                 </p>
+                 <p>
+                     <label for="Phone">Phone:</label>
+                     <input class="input_style" type="text" id="Phone" name="user_phone" />
+                 </p>
+                 <p>
+                 </p>
+                 <label for="Lenguge">Lenguge:</label>
+                 <select class="input_style" name="Lenguge" id="Lenguge">
+                     <option value="C++">C++</option>
+                     <option value="C#" selected>C#</option>
+                     <option value="JavaScript">JavaScript</option>
+                     <option value="Java">Java</option>
+
+                 </select>
+                 <p>
+             </div>
+             <div class="text_area">
+                 <textarea id="msg" name="user_message" cols="45" rows="10" placeholder="Write your message..."></textarea>
+             </div>
+
+             <div class="button">
+                 <button class="send_btn_style" type="submit">Send your message >>> </button>
+
+                 <button class="cancel_btn_style" type="reset">Cancel </button>
+             </div>
+
+             </p>
+         </form>
+
+         <div class="back"><a href="#name"> &#10514; Back &#10514;</a></div>
 </div>
 </html>
