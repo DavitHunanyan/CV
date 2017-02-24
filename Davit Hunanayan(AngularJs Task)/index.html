@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular task</title>
+
+	<meta charset="utf-8">
+	<meta name="description" content="Angular">
+	<meta name="author" content="Davit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> <!--online angular src -->
+    <script src="lib/dirPagination.js">&lt</script>
+
+</head>
+<body>
+<section class="dashboard pt50 pb50">
+		<div ng-app="angularTable" ng-controller="listData" class="container">
+
+			<div class="blockTitle">
+                            <h1>Manage Users</h1>
+                            <span class="line"></span>
+			</div>
+               
+                        <div  class="boxBorder padding5 boxTable">
+                            <div class="pb5">
+                                <form class="clearAfter">
+                                    <div class="field searchLine">
+                                        <input id="search_input" type="text" placeholder="Search..." ng-model="search">
+                                    </div>
+                                </form>
+
+                            </div>
+
+
+                            <!--Table start-->
+
+                            <table class="table4Columns">
+
+
+                                <thead>
+
+                                    <tr>
+                                        <th ng-click="sort('firstname')">First Name</th>
+                                        <th  ng-click="sort('lastname')">Last Name</th>
+                                        <th  ng-click="sort('city')">City</th>
+                                        <th  ng-click="sort('age')">Age</th>
+                                        <th  ng-click="sort('id')">Id</th>
+                                        <th>Info</th>
+
+                                    </tr>
+
+                                </thead>
+                                        
+                                <tbody>
+                                    <tr dir-paginate="user in users|orderBy:sortKey:reverse|filter:search|itemsPerPage:7">
+                                        <td>{{ user.firstname }} </td>
+                                        <td>{{user.lastname}} </td>
+                                        <td>{{user.city}} </td>
+                                        <td>{{user.age}} </td>
+                                        <td>{{user.id}} </td>
+                                        <td >
+                                            <i ng-click="detail(user.id)"><span style="text-decoration: underline;">More</span></i>
+                                        </td>
+                                   </tr>
+                                </tbody>
+
+
+                             </table>
+                            <!--Table End-->
+                                <div class="pagination pt20">
+                                   
+                                   <dir-pagination-controls
+                                       max-size="5"
+                                       direction-links="true"
+                                       boundary-links="true" >
+                                    </dir-pagination-controls>
+
+                                </div>
+                            
+
+                        </div>
+
+                    </div>
+                </div>
+		</div>
+
+	</section>
+
+
+<script type="text/javascript" src="json/data.js"></script> 
+<script type="text/javascript" src="js/angular.js"></script>
+
+</body>
+</html>
