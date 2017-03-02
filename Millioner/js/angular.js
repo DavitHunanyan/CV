@@ -5,11 +5,13 @@ app.controller('questionCtrl', function($scope, $window,$document) {
    var users=[];
    var user_bal=0;
    var step=0;
-
+   var clickcount=0;
+    
   $scope.question=data[step].question;
   $scope.answers=data[step].answers;
   
   $scope.answer=function(answ){
+	  if(clickcount===0){
   	    var answer_id="#style"+answ;
 	    var answer_el=angular.element( document.querySelector( answer_id ) );
 
@@ -25,6 +27,8 @@ app.controller('questionCtrl', function($scope, $window,$document) {
           answer_el.addClass("wrong");
         }
 	    console.log(user_bal);
+	  }
+	  clickcount+=1;
    };
 
    $scope.next=function(){
@@ -45,6 +49,7 @@ app.controller('questionCtrl', function($scope, $window,$document) {
 	   		var nxtbut=angular.element( document.querySelector('#nextButton'));
 	   		nxtbut.attr('href','result.html?val='+user_bal);//datai  poxancum
 	   	}
+	    clickcount=0;
    };
 
 
