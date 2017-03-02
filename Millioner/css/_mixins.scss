@@ -1,0 +1,136 @@
+@mixin boxSizing($property) {
+    box-sizing: $property;
+    -ms-box-sizing: $property;
+    -moz-box-sizing: $property;
+    -webkit-box-sizing: $property;
+}
+@mixin transition($transition...) {
+        transition: $transition;
+        -ms-transition: $transition;
+        -moz-transition: $transition;
+        -webkit-transition: $transition;
+}
+@mixin bgCover($imgUrl, $bg_pos) {
+    background-image: url($imgUrl);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: $bg_pos;
+}
+
+// generic transform
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+// rotate
+@mixin rotate($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+} 
+// translate
+@mixin translate($x, $y) {
+    @include transform(translate($x, $y));
+}
+// skew
+@mixin skew($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin($origin) {
+    moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+//linear gradient
+@mixin linearGradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin placeholder($txtcolor) {
+    &::-webkit-input-placeholder {
+        color: $txtcolor;
+        font-family: $gothamFont;
+        text-transform: uppercase;
+    }
+    &::-moz-placeholder {
+        color: $txtcolor;
+        font-family: $gothamFont;
+        text-transform: uppercase;
+    }
+    &:-moz-placeholder {
+        color: $txtcolor;
+        font-family: $gothamFont;
+        text-transform: uppercase;
+    }
+    &:-ms-input-placeholder {
+        color: $txtcolor;
+        font-family: $gothamFont;
+        text-transform: uppercase;
+    }
+}
+
+@mixin animate($second) {
+    -webkit-transition: all $second linear;
+    -moz-transition: all $second linear;
+    -ms-transition: all $second linear;
+    -o-transition: all $second linear;
+    transition: all $second linear;
+}
+
+
+/* Start Margin Top and Bottom Spaces */
+
+$mtStep: 5;
+@while $mtStep <= 100 {
+    .mt#{$mtStep} {
+        margin-top: #{$mtStep}px;
+    }
+    .pt#{$mtStep} {
+        padding-top: #{$mtStep}px;
+    }
+    $mtStep: $mtStep + 5;
+}
+$mbStep: 5;
+@while $mbStep <= 100 {
+    .mb#{$mbStep} {
+        margin-bottom: #{$mbStep}px;
+    }
+    .pb#{$mbStep} {
+        padding-bottom: #{$mbStep}px;
+    }
+    $mbStep: $mbStep + 5;
+}
+
+/* End Margin Top and Bottom Spaces */
+
+/* Start Media Queries */
+
+@mixin MQ($canvas) {
+    @if $canvas == S {
+        @media only screen and (min-width: $S) { @content; } 
+    }
+    @else if $canvas == M {
+        @media only screen and (min-width: $M) { @content; } 
+    }
+    @else if $canvas == L {
+        @media only screen and (min-width: $L) { @content; } 
+    }
+}
+
+/* End Media Queries */

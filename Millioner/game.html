@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="game">
+	<head>
+		<meta charset="utf-8">
+		<title>Electro Cars Station Finder</title>
+		<meta name="description" content="">
+		<meta name="author" content="ST-Dev" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Start Theme CSS -->
+
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Start Font Awesome Font Styles -->
+
+		<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+		<!-- End Font Awesome Font Styles -->
+
+		<!-- End Theme CSS -->
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	</head>
+	<body >
+
+
+		<!-- Site Logo -->
+		<div class="logo">
+			<img src="img/millionaire.svg" alt="millionaire">         
+		</div>
+    
+
+        <div class="main_content clearAfter"  ng-controller="questionCtrl">
+            <aside class="content">
+                <div class="question border">
+                    <p>
+                        {{question}}
+                    </p>
+                </div>
+                <div class="answers"  >
+                    <ul class="clearAfter" >
+                        <li id="style0" >
+                            <a href="#" >
+                                <div class="border">
+                                    <p ng-click="answer('0')" ><strong>A : </strong>{{answers[0].answer}}</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li  id="style1">
+                            <a href="#">
+                                <div class="border">
+                                    <p ng-click="answer('1')"><strong>B : </strong>{{answers[1].answer}}</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li   id="style2">
+                            <a href="#">
+                                <div class="border">
+                                    <p ng-click="answer('2')"><strong>C : </strong>{{answers[2].answer}}</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li   id="style3">
+                            <a href="#">
+                                <div class="border">
+                                    <p ng-click="answer('3')"><strong>D : </strong>{{answers[3].answer}}</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="button">
+                    <a class="btn"  ng-click="next()" id ="nextButton">Next</a>
+                </div>
+            </aside>
+            <aside class="questionsList">
+                <ul>    
+                    <li class="clearAfter" id="id1">
+                        <strong>1.</strong>
+                        <p>25</p>
+                    </li>
+                    <li class="clearAfter" id="id2">
+                        <strong>2.</strong>
+                        <p>250</p>
+                    </li>
+                    <li class="clearAfter" id="id3">
+                        <strong>3.</strong>
+                        <p>2500</p>
+                    </li>
+                    <li class="clearAfter" id="id4">
+                        <strong>4.</strong>
+                        <p>25000</p>
+                    </li>
+                    <li class="clearAfter" id="id5">
+                        <strong>5.</strong>
+                        <p>250000</p>
+                    </li>
+                </ul>
+            </aside>
+
+		</div>
+
+		<!-- Start Theme Scripts -->
+        <script type="text/javascript" src="json/data.js"></script>
+        <script type="text/javascript" src="json/userdata.js"></script>
+        <script type="text/javascript" src="js/angular.js"></script>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/main.js"></script>
+
+		<!-- End Theme Scripts -->
+
+	</body>
+</html>
