@@ -18,6 +18,11 @@ app.controller('questionCtrl', function($scope, $window,$document) {
 	    if(questions[step].answers[answ].bool=="true"){
 	     	user_bal+=1;
         answer_el.addClass("true");
+        var ar=["#id1","#id2","#id3","#id4"];
+              for(var i=0; i<ar.length;++i){
+                  var elem =angular.element( document.querySelector( ar[i]));
+                  elem.removeClass('active');
+                }
 	    
 	    var id="#id"+user_bal;
 	    var elem=angular.element( document.querySelector( id ) );
